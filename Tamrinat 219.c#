@@ -1,0 +1,86 @@
+namespace tamrinn
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("adad ra vard konid: ");
+            ushort a = ushort.Parse(Console.ReadLine());
+            ushort b = ushort.Parse(Console.ReadLine());
+            ushort c = ushort.Parse(Console.ReadLine());
+
+
+            long delta = (b * b - 4 * a * c);
+            Console.WriteLine(delta);
+
+        }
+    }
+}
+
+namespace Moadel
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("tedad dars ra vared konid ");
+            float td = byte.Parse(Console.ReadLine());
+            float vd;
+            float nd;
+            float s = 0;
+            float m = 0;
+            for (int i = 1; i <= td; i++)
+            {
+                Console.Write("tedad vahed dars {0}:", i);
+                vd = float.Parse(Console.ReadLine());
+                Console.Write("nomre dars ra vared konid {0}:", i);
+                nd = float.Parse(Console.ReadLine());
+                s = s + (nd * vd);
+                m = (float)(m + vd);
+            }
+            Console.Write(s / m);
+        }
+    }
+}
+
+namespace ConsoleApp20
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("tedad honarzoyan ra ard konid: ");
+            ushort a = ushort.Parse(Console.ReadLine());
+            long b = (a / 3);
+            Console.WriteLine(b);
+        }
+    }
+}
+
+namespace ConsoleApp19
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ushort a = ushort.Parse(Console.ReadLine());
+            long hoghoogh = (a * 3) / 100;
+            long sood = (a - hoghoogh);
+        }
+    }
+}
+
+namespace ConsoleApp18
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            ushort a = ushort.Parse(Console.ReadLine());
+            ushort b = ushort.Parse(Console.ReadLine());
+            ushort c = ushort.Parse(Console.ReadLine());
+            int g = (a + b + c) / 3;
+            Console.WriteLine(g);
+        }
+    }
+}
