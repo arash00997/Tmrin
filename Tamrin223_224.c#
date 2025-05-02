@@ -1,0 +1,33 @@
+namespace MathProject
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //input radius of the circle
+            Console.Write("inter the radius in meter");
+            int radius = int.Parse(Console.ReadLine());
+           // caculate circle environment
+            double env = 2 * Math.PI * radius;
+            //display circle environment
+             Console.WriteLine(env);
+            Console.WriteLine("masahat fazaye negar khane ra vared konid(m.m)");
+            double area = Convert.ToDouble(Console.ReadLine());
+            double side = Math.Sqrt(area);
+            double sidecm = side * 100;
+            int a = (int)Math.Ceiling(sidecm / 60.0);
+            int b = (int)Math.Ceiling(sidecm / 30.0);
+            int c = a * b;
+            Console.WriteLine("tedad seramic mored niyaz baraye farsh kardan negarkhane:  {0}",c);
+            Console.WriteLine("mohit favare(m)");
+            double p = Convert.ToDouble(Console.ReadLine());
+
+            double w = 30.0;
+            double t = 15.0;
+            int tt = (int)Math.Ceiling((p * 100) / t);
+            int tv = (int)Math.Ceiling(w/t);
+            int tw = tt * tv;
+            Console.WriteLine("tedad kashi lazem:  {0}",tw);
+        }
+    }
+}
