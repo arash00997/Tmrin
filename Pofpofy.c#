@@ -1,0 +1,68 @@
+namespace tamrin00
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> behtarin = new List<string>();
+
+            int vanilprice = 5000;
+            int totfarangiprice = 5500;
+            int shokolatiprice = 6000;
+
+            int vanilcount = 0;
+            int totfarangicount = 0;
+            int shokolaticount = 0;
+
+            int totalsold = 0;
+            Console.WriteLine("tedad moshtari ha ra vared konid: ");
+            int coustomercount = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < coustomercount; i++)
+            {
+                Console.WriteLine("moshtari shomare{0}",i+1);
+                Console.WriteLine("tedad vanil haye forokhte shode: ");
+                int tempvanil = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("tedad totfarangi haye forokhte shode: ");
+                int temptotfarangi = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("tedad shokolati haye forokhte shode: ");
+                int tempshokolati = int.Parse(Console.ReadLine());
+
+                vanilcount += tempvanil;
+                totfarangicount += temptotfarangi;
+                shokolaticount += tempshokolati;
+
+                totalsold += (tempvanil * vanilprice) + (temptotfarangi * totfarangiprice) + (tempshokolati * shokolatiprice);
+            }
+            Console.WriteLine("forooshe kole emroz:  {0}",totalsold);
+            Console.WriteLine("tedad vanil haye forokhte shode:  {0}",vanilcount);
+            Console.WriteLine("tedad totfarangi haye forokhte shode:  {0}", totfarangicount);
+            Console.WriteLine("tedad shokolati haye forokhte shode:  {0}", shokolaticount);
+
+            int maxsold = Math.Max(vanilcount, Math.Max(totfarangicount, shokolaticount));
+
+            if (maxsold == vanilcount)
+            {
+                behtarin.Add("vanil");
+            }
+            if (maxsold == totfarangicount) ;
+            {
+                behtarin.Add("tot farangi");
+            }
+            if (maxsold == shokolaticount)
+            {
+                behtarin.Add("shokolati");
+            }
+            if (behtarin.Count == 1)
+            {
+                Console.WriteLine(behtarin[0] +"behtarin foroosh");
+            }
+            else
+            {
+                Console.WriteLine(string.Join(",", behtarin) + "(barabari)");
+            }
+        }
+    }
+}
